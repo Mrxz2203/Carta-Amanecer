@@ -4,118 +4,15 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .App {
-  font-family: 'Georgia', serif;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.container {
-  max-width: 700px;
-  background: rgba(26, 26, 46, 0.9);
-  padding: 35px 40px;
-  border-radius: 15px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-h1 {
-  color: #e8b4b8;
-  font-size: 2.2em;
-  margin-bottom: 25px;
-  text-align: center;
-  font-weight: 300;
-  letter-spacing: 2px;
-}
-
-.letra {
-  color: #d4d4d4;
-  font-size: 1em;
-  line-height: 1.7;
-  text-align: left;
-  margin-bottom: 25px;
-}
-
-.letra p {
-  margin-bottom: 12px;
-}
-
-.firma {
-  color: #a8a8a8;
-  font-size: 1em;
-  text-align: right;
-  font-style: italic;
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 25px;
-}
-
-.video-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.video-thumbnail {
-  width: 200px;
-  height: 112px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.video-thumbnail:hover {
-  transform: scale(1.05);
-}
-
-.video-thumbnail img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.inspiration-btn {
-  padding: 8px 20px;
-  background: linear-gradient(135deg, #e8b4b8 0%, #c89da3 100%);
-  color: #1a1a2e;
-  border: none;
-  border-radius: 6px;
-  font-family: 'Georgia', serif;
-  font-size: 0.9em;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(232, 180, 184, 0.3);
-}
-
-.inspiration-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(232, 180, 184, 0.5);
-}
-
-@media (max-width: 600px) {
-  .container {
-    padding: 30px 25px;
-  }
-  
-  h1 {
-    font-size: 1.8em;
-  }
-  
-  .letra {
-    font-size: 0.95em;
-  }
-  
-  .video-thumbnail {
-    width: 160px;
-    height: 90px;
-  }
 }

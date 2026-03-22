@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+.carta-container {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+/* Fondo con blur */
+.carta-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center top;
+  filter: blur(10px) brightness(0.55);
+  transform: scale(1.1);
+  z-index: -2;
+}
+
+/* Overlay azul índigo suave */
+.carta-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(147, 197, 253, 0.15),
+    rgba(10, 15, 46, 0.88)
+  );
+  z-index: -1;
+}
+
+.carta-wrapper {
+  max-width: 42rem;
+  width: 100%;
+}
+
+/* Carta */
+.carta-box {
+  background: linear-gradient(to bottom right, #1a1f4e, #0d1035);
+  border-radius: 0.75rem;
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.6),
+    0 0 35px rgba(147, 197, 253, 0.15);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(196, 181, 253, 0.3);
+
+  animation: aparecer-suave 1.6s ease-out forwards;
+}
+
+@keyframes aparecer-suave {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.carta-titulo {
+  font-size: 2.2rem;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.14em;
+  color: #bfdbfe;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  animation: latido 4s ease-in-out infinite;
+}
+
+@keyframes latido {
+  0%, 100% {
+    text-shadow:
+      0 0 8px rgba(191, 219, 254, 0.4),
+      0 0 20px rgba(147, 197, 253, 0.2);
+  }
+  50% {
+    text-shadow:
+      0 0 18px rgba(191, 219, 254, 1),
+      0 0 40px rgba(196, 181, 253, 0.7),
+      0 0 60px rgba(147, 197, 253, 0.4);
+  }
+}
+
+.carta-texto {
+  color: #e0e7ff;
+  line-height: 1.9;
+  white-space: pre-line;
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Flecha */
+.flecha-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.flecha-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: #93c5fd;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.flecha-button:hover {
+  color: #bfdbfe;
+}
+
+.flecha-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.flecha-icon {
+  width: 2rem;
+  height: 2rem;
+  animation: flotar 2.5s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* Botones */
+.botones-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.boton {
+  flex: 1;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.08em;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  transition: all 0.3s;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.boton:hover {
+  transform: scale(1.05);
+}
+
+/* Azul cielo */
+.boton-musica {
+  background: linear-gradient(to right, #2563eb, #3b82f6);
+  box-shadow: 0 10px 15px rgba(37, 99, 235, 0.3);
+}
+
+.boton-musica:hover {
+  background: linear-gradient(to right, #1d4ed8, #2563eb);
+}
+
+/* Lavanda */
+.boton-carta {
+  background: linear-gradient(to right, #6d28d9, #7c3aed);
+  box-shadow: 0 10px 15px rgba(109, 40, 217, 0.3);
+}
+
+.boton-carta:hover {
+  background: linear-gradient(to right, #5b21b6, #6d28d9);
+}
+
+.boton-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Indicador de páginas */
+.indicador-paginas {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.indicador-punto {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  background-color: rgba(147, 197, 253, 0.2);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.indicador-punto.activo {
+  width: 2rem;
+  background-color: #93c5fd;
+  box-shadow: 0 0 8px rgba(147, 197, 253, 0.5);
+}
+
+/* Tiempo del audio */
+.tiempo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  color: #93c5fd;
+  font-size: 0.875rem;
+}
+
+.tiempo-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.tiempo-texto {
+  font-family: monospace;
+  font-weight: 500;
+}
+
+/* Modal de sincronización */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 8, 30, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: aparecer-modal 0.3s ease-out;
+}
+
+@keyframes aparecer-modal {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modal-contenido {
+  background: linear-gradient(to bottom right, #1a1f4e, #0d1035);
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 28rem;
+  width: 90%;
+  border: 1px solid rgba(196, 181, 253, 0.3);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(147, 197, 253, 0.1);
+  animation: deslizar-modal 0.3s ease-out;
+}
+
+@keyframes deslizar-modal {
+  from { transform: translateY(-20px) scale(0.95); }
+  to   { transform: translateY(0) scale(1); }
+}
+
+.modal-titulo {
+  color: #bfdbfe;
+  font-size: 1.6rem;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.modal-texto {
+  color: #e0e7ff;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: 'Crimson Text', serif;
+  font-size: 1.05rem;
+}
+
+.modal-boton {
+  width: 100%;
+  background: linear-gradient(to right, #2563eb, #7c3aed);
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.12em;
+  font-size: 1.1rem;
+  padding: 0.875rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.modal-boton:hover {
+  background: linear-gradient(to right, #1d4ed8, #6d28d9);
+  transform: scale(1.02);
+}
+
+/* Sincronización activa */
+.sincronizacion-activa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  color: #a5b4fc;
+  font-size: 0.875rem;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.08em;
+  animation: pulso 2s ease-in-out infinite;
+}
+
+@keyframes pulso {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+.sincronizacion-icon {
+  width: 1rem;
+  height: 1rem;
+  animation: rotar 2s linear infinite;
+}
+
+@keyframes rotar {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Botón de sincronización */
+.sincronizacion-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.boton-sincronizacion {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #2563eb, #7c3aed);
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.08em;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.boton-sincronizacion:hover {
+  background: linear-gradient(to right, #1d4ed8, #6d28d9);
+  transform: scale(1.05);
+}
+
+.boton-sincronizacion.activo {
+  background: linear-gradient(to right, #dc2626, #ef4444);
+}
+
+.boton-sincronizacion.activo:hover {
+  background: linear-gradient(to right, #b91c1c, #dc2626);
+}
+
+/* Deshabilitar indicadores en modo sincronización */
+.indicador-punto:disabled {
+  cursor: not-allowed;
+  opacity: 0.35;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .carta-box {
+    padding: 1.5rem;
+  }
+
+  .carta-titulo {
+    font-size: 1.75rem;
+  }
+
+  .carta-texto {
+    font-size: 1.05rem;
+  }
+
+  .botones-container {
+    flex-direction: column;
+  }
+}
