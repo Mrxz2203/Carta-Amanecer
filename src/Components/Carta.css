@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+
 
 .carta-container {
   min-height: 100vh;
@@ -68,7 +69,7 @@
 
 .carta-titulo {
   font-size: 2.2rem;
-  font-family: 'Bebas Neue', sans-serif;
+   font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 0.14em;
   color: #bfdbfe;
   text-align: center;
@@ -95,7 +96,7 @@
   color: #e0e7ff;
   line-height: 1.9;
   white-space: pre-line;
-  font-family: 'Crimson Text', Georgia, serif;
+   font-family: Georgia, 'Times New Roman', serif;
   font-size: 1.2rem;
   text-align: center;
 }
