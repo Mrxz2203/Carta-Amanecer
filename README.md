@@ -20,37 +20,7 @@ Bash
 npm start
 La aplicación se ejecutará automáticamente en http://localhost:3000.
 
-🎧 Lógica de Sincronización
-El componente principal utiliza un objeto con intervalos numéricos en segundos para mapear la pista de audio con el texto:
 
-JavaScript
-const tiemposPaginas = {
-  1: { inicio: 0, fin: 15 },
-  2: { inicio: 15, fin: 22 },
-  // ... hasta la página 23
-};
-Un hook useEffect reacciona al evento timeupdate de la etiqueta HTML5 <audio> para alternar el estado currentPage cuando la opción sincronizacionActiva se encuentra habilitada [cite: 6].
-
-🎨 Diseño y Estilos (CSS)
-Fondo con Blur e Iluminación: Uso de ::before y ::after en .carta-container con filter: blur(10px) para lograr un efecto de profundidad de campo [cite: 6].
-
-Animación latido: Aplicada al título con sombreados difuminados (text-shadow) variables [cite: 6].
-
-Modal Flotante: Capa superpuesta con animación de escala e iluminación perimetral para una interacción fluida [cite: 6].
-"""
-
-with open("README_CARTA.md", "w", encoding="utf-8") as f:
-f.write(readme_carta_content)
-
-print("README para la Carta Musical creado correctamente.")
-
-
-```text?code_stdout&code_event_index=1
-README para la Carta Musical creado correctamente.
-
-Aquí tienes el archivo README.md adaptado al proyecto de la carta musical interactiva "Carta - Amanecer"[cite: 6].
-
-Markdown
 # 🎵 Carta Musical: Amanecer
 
 Una aplicación web interactiva y poética desarrollada con **React.js**[cite: 6]. Ofrece una experiencia inmersiva mediante sincronización en tiempo real entre un reproductor de audio, estrofas sincronizadas por tiempo y un diseño visual con efectos de desenfoque y gradientes[cite: 6].
@@ -59,14 +29,12 @@ Una aplicación web interactiva y poética desarrollada con **React.js**[cite: 6
 
 ## 📋 Tabla de Contenidos
 
-- [📌 Descripción del Proyecto](#-descripción-del-proyecto)
-- [✨ Características Principales](#-características-principales)
-- [🛠️ Tecnologías Utilizadas](#️-tecnologías-utilizadas)
-- [📁 Estructura del Proyecto](#-estructura-del-proyecto)
-- [⚙️ Requisitos Previos e Instalación](#️-requisitos-previos-e-instalación)
-- [🚀 Ejecución en Desarrollo](#-ejecución-en-desarrollo)
-- [🎧 Lógica de Sincronización](#-lógica-de-sincronización)
-- [🎨 Diseño y Estilos (CSS)](#-diseño-y-estilos-css)
+- [🎵 Carta Musical: Amanecer](#-carta-musical-amanecer)
+  - [📋 Tabla de Contenidos](#-tabla-de-contenidos)
+  - [📌 Descripción del Proyecto](#-descripción-del-proyecto)
+  - [✨ Características Principales](#-características-principales)
+  - [🛠️ Tecnologías Utilizadas](#️-tecnologías-utilizadas)
+  - [📁 Estructura del Proyecto](#-estructura-del-proyecto)
 
 ---
 
